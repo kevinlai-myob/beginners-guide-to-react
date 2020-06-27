@@ -1,0 +1,18 @@
+
+<body>
+  <div id="root"></div>
+  <!-- add react and reactDOM from unpkg -->
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script type="text/javascript">
+    const rootElement = document.getElementById('root');
+    // create react element  by using createElement API and feed it to the DOM to render ( put them on webpage)
+    // This creates div as an object that has properties of X,Y,Z
+    const element = React.createElement('div', {
+      className: 'container',
+      children: ['Hello World',  ', ' , 'this is working']
+    });
+    // render = appendChild element to rootElement
+    ReactDOM.render(element, rootElement)
+  </script>
+</body>

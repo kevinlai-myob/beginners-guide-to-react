@@ -1,0 +1,17 @@
+
+<body>
+
+  <!-- To create UI with JS, we need a place (e.g. root) to append your JavaScript DOM -->
+  <div id="root"></div>
+  <script type="text/javascript">
+    // get access to the element "root" by document.getElementById
+    const rootElement = document.getElementById('root');
+    // create our element
+    const element = document.createElement('div');
+    // add properties to that element
+    element.textContent = 'Hello this is working';
+    element.className = 'container';
+    // append the element to the DOM
+    rootElement.appendChild(element);
+  </script>
+</body>
