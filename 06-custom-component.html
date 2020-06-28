@@ -1,0 +1,25 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+    // Some components don’t know their children ahead of time, 
+    // so we should use the special children prop to pass children elements directly into their output
+    const Message = (props) => <div className="message">{props.children}</div>
+    
+    const element = (
+        <div className="container">
+            <Message>Good morning world</Message>
+        </div>
+    )
+    // const element2 =(
+    // <div className="container">
+    //     <Message msg= 'Good morning world'></Message>
+    //     <Message msg= 'Good night world'></Message>
+    // </div>
+    // )
+
+    ReactDOM.render(element, document.getElementById('root'))
+    </script>
+  </body>
